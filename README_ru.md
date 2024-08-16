@@ -3,48 +3,48 @@
 Он НЕ ДОЛЖЕН редактироваться вручную.
 -->
 
-# Zola для YunoHost
+# Faircamp для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/zola.svg)](https://ci-apps.yunohost.org/ci/apps/zola/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
+[![Уровень интеграции](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
 
-[![Установите Zola с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=zola)
+[![Установите Faircamp с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 
 *[Прочтите этот README на других языках.](./ALL_README.md)*
 
-> *Этот пакет позволяет Вам установить Zola быстро и просто на YunoHost-сервер.*  
+> *Этот пакет позволяет Вам установить Faircamp быстро и просто на YunoHost-сервер.*  
 > *Если у Вас нет YunoHost, пожалуйста, посмотрите [инструкцию](https://yunohost.org/install), чтобы узнать, как установить его.*
 
 ## Обзор
 
-Zola is a [Static Site Generator](https://en.wikipedia.org/wiki/Static_site_generator).
+Zola is a [Static Site Generator](https://en.wikipedia.org/wiki/Static_site_generator) dedicated to music producers.
 
 With this package, Zola will automatically regenerate ([using Systemd Path Units](https://www.putorius.net/systemd-path-units.html)) your website if any change is made to your sources.
 
 
-**Поставляемая версия:** 0.19.0~ynh1
+**Поставляемая версия:** 0.15.1~ynh1
 
 ## Снимки экрана
 
-![Снимок экрана Zola](./doc/screenshots/zola-screenshot.jpg)
+![Снимок экрана Faircamp](./doc/screenshots/faircamp-screenshot.png)
 
 ## Документация и ресурсы
 
-- Официальный веб-сайт приложения: <https://www.getzola.org/>
-- Официальная документация администратора: <https://www.getzola.org/documentation/getting-started/overview/>
-- Репозиторий кода главной ветки приложения: <https://github.com/getzola/zola>
-- Магазин YunoHost: <https://apps.yunohost.org/app/zola>
-- Сообщите об ошибке: <https://github.com/YunoHost-Apps/zola_ynh/issues>
+- Официальный веб-сайт приложения: <https://simonrepp.com/faircamp/>
+- Официальная документация администратора: <https://simonrepp.com/faircamp/manual/>
+- Репозиторий кода главной ветки приложения: <https://codeberg.org/simonrepp/faircamp>
+- Магазин YunoHost: <https://apps.yunohost.org/app/faircamp>
+- Сообщите об ошибке: <https://github.com/YunoHost-Apps/faircamp_ynh/issues>
 
 ## Информация для разработчиков
 
-Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/zola_ynh/tree/testing).
+Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing).
 
 Чтобы попробовать ветку `testing`, пожалуйста, сделайте что-то вроде этого:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/zola_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing --debug
 или
-sudo yunohost app upgrade zola -u https://github.com/YunoHost-Apps/zola_ynh/tree/testing --debug
+sudo yunohost app upgrade faircamp -u https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing --debug
 ```
 
 **Больше информации о пакетировании приложений:** <https://yunohost.org/packaging_apps>

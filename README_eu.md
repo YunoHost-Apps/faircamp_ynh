@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Faircamp YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/zola.svg)](https://ci-apps.yunohost.org/ci/apps/zola/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
 
 [![Instalatu Faircamp YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 

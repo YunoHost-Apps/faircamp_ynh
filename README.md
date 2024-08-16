@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Faircamp for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/zola.svg)](https://ci-apps.yunohost.org/ci/apps/zola/) ![Working status](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Working status](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
 
 [![Install Faircamp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 
