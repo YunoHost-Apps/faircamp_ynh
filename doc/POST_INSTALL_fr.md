@@ -1,5 +1,4 @@
-- Votre Zola est installé dans `__INSTALL_DIR__` et accessible à l'adresse <https://__DOMAIN__>
+- Votre Faircamp est installé dans `__INSTALL_DIR__`
 - Votre contenu doit être dans `__INSTALL_DIR__/content`
-- Votre fichier de configuration est `__INSTALL_DIR__/config.toml` (voir [la doc de configuration](https://www.getzola.org/documentation/getting-started/configuration/))
-- [Choisissez un thème](https://www.getzola.org/themes/), installez-le dans `__INSTALL_DIR__/themes`, puis configurez-le dans votre fichier `config.toml`.
-- Le site sera automatiquement mis à jour à chaque fois que vous modifierez quelque chose dans les dossiers `content`, `static`, `templates` ou `themes` ou le fichier `config.toml` !
+- Votre fichier de configuration est `__INSTALL_DIR__/content/manifest.eno` (voir [la doc](https://simonrepp.com/faircamp/manual/manifests.html))
+- Le site sera automatiquement mis à jour à chaque fois que vous modifierez quelque chose dans le dossier `content` !

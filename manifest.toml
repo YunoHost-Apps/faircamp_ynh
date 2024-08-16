@@ -2,21 +2,20 @@
 
 packaging_format = 2
 
-id = "zola"
-name = "Zola"
-description.en = "A static site generator"
-description.fr = "Un générateur de site statique"
+id = "faircamp"
+name = "Faircamp"
+description.en = "A static site generator for audio artists and producers"
+description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
-version = "0.19.0~ynh1"
+version = "0.15.1~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
 [upstream]
-license = "MIT"
-website = "https://www.getzola.org/"
-admindoc = "https://www.getzola.org/documentation/getting-started/overview/"
-code = "https://github.com/getzola/zola"
-fund = "https://github.com/sponsors/Keats"
+license = "AGPL-3.0-or-later"
+website = "https://simonrepp.com/faircamp/"
+admindoc = "https://simonrepp.com/faircamp/manual/"
+code = "https://codeberg.org/simonrepp/faircamp"
 
 [integration]
 yunohost = ">= 11.2"
@@ -40,7 +39,7 @@ ram.runtime = "50M"
 
     [install.auto_rebuild]
     ask.en = "Auto-rebuild?"
-    help.en = "Do you want Zola to automatically rebuild your website when files have been modified?"
+    help.en = "Do you want Faircamp to automatically rebuild your website when files have been modified?"
     type = "boolean"
     default = true
 
@@ -49,12 +48,13 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/getzola/zola/releases/download/v0.19.0/zola-v0.19.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 = "5d26b7c63d36bcfc42a2db41d35cdd7bbde1762571ee936a89d155d7fd600f77"
+    url = "https://simonrepp.com/faircamp/packages/faircamp_0.15.1-1+deb11_amd64.deb"
+    sha256 = "6eca022035eaae367dabb19adef1eda7ab800baf199ef215edffabef11acbfef"
     in_subdir = false
+    extract = false
+    rename = "faircamp.deb"
 
-    autoupdate.strategy = "latest_github_release"
-    autoupdate.asset = "^zola-v.*-x86_64-unknown-linux-gnu.tar.gz$"
+    autoupdate.strategy = "latest_forgejo_tag"
 
     [resources.system_user]
 
@@ -62,3 +62,6 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
+
+    [resources.apt]
+    packages = "ffmpeg"

@@ -1,0 +1,21 @@
+# catalog
+
+base_url: https://__DOMAIN____PATH__
+
+label_mode
+show_support_artists
+title: My awesome music
+
+-- text
+My self hosted Faircamp website proudly hosted on YunoHost,
+which presents some of my awesome music.
+
+Nice of you to stop by!
+-- text
+
+# download
+
+free
+formats:
+- opus
+- mp3

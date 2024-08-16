@@ -3,48 +3,50 @@
 请勿手动编辑。
 -->
 
-# YunoHost 上的 Zola
+# YunoHost 上的 Faircamp
 
-[![集成程度](https://dash.yunohost.org/integration/zola.svg)](https://ci-apps.yunohost.org/ci/apps/zola/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
 
-[![使用 YunoHost 安装 Zola](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=zola)
+[![使用 YunoHost 安装 Faircamp](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 
 *[阅读此 README 的其它语言版本。](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Zola。*  
+> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Faircamp。*  
 > *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
 
 ## 概况
 
-Zola is a [Static Site Generator](https://en.wikipedia.org/wiki/Static_site_generator).
+Zola is a [Static Site Generator](https://en.wikipedia.org/wiki/Static_site_generator) dedicated to music producers.
 
 With this package, Zola will automatically regenerate ([using Systemd Path Units](https://www.putorius.net/systemd-path-units.html)) your website if any change is made to your sources.
 
+Alternatively to this package, you can [install Faircamp on your computer](https://simonrepp.com/faircamp/manual/installation.html) and use its rsync feature (ith the `--deploy` or `--deploy-destination` options) to send the builded website to a [My Webapp](https://apps.yunohost.org/app/my_webapp) folder on your YunoHost server.
 
-**分发版本：** 0.19.0~ynh1
+
+**分发版本：** 0.15.1~ynh1
 
 ## 截图
 
-![Zola 的截图](./doc/screenshots/zola-screenshot.jpg)
+![Faircamp 的截图](./doc/screenshots/faircamp-screenshot.png)
 
 ## 文档与资源
 
-- 官方应用网站： <https://www.getzola.org/>
-- 官方管理文档： <https://www.getzola.org/documentation/getting-started/overview/>
-- 上游应用代码库： <https://github.com/getzola/zola>
-- YunoHost 商店： <https://apps.yunohost.org/app/zola>
-- 报告 bug： <https://github.com/YunoHost-Apps/zola_ynh/issues>
+- 官方应用网站： <https://simonrepp.com/faircamp/>
+- 官方管理文档： <https://simonrepp.com/faircamp/manual/>
+- 上游应用代码库： <https://codeberg.org/simonrepp/faircamp>
+- YunoHost 商店： <https://apps.yunohost.org/app/faircamp>
+- 报告 bug： <https://github.com/YunoHost-Apps/faircamp_ynh/issues>
 
 ## 开发者信息
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/zola_ynh/tree/testing) 发送拉取请求。
+请向 [`testing` 分支](https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing) 发送拉取请求。
 
 如要尝试 `testing` 分支，请这样操作：
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/zola_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing --debug
 或
-sudo yunohost app upgrade zola -u https://github.com/YunoHost-Apps/zola_ynh/tree/testing --debug
+sudo yunohost app upgrade faircamp -u https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing --debug
 ```
 
 **有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>

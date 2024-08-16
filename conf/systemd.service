@@ -1,12 +1,12 @@
 [Unit]
-Description="Run 'zola build'"
+Description="Run the build of the Faircamp website"
 
 [Service]
 Type=exec
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/zola build
+ExecStart=__INSTALL_DIR__/faircamp --build-dir __INSTALL_DIR__/www --catalog-dir __INSTALL_DIR__/content
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
