@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Zola for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/zola.svg)](https://dash.yunohost.org/appci/app/zola) ![Working status](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/zola.svg)](https://ci-apps.yunohost.org/ci/apps/zola/) ![Working status](https://ci-apps.yunohost.org/ci/badges/zola.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/zola.maintain.svg)
 
 [![Install Zola with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=zola)
 
