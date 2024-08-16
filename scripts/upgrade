@@ -23,10 +23,19 @@ fi
 #=================================================
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
+tempdir="$(mktemp -d)"
+
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod +x "$install_dir/zola"
+# extract the binary from the deb file
+dpkg-deb -R faircamp_0.15.1-1+deb11_amd64.deb "$tempdir"
+
+mv "$tempdir/usr/bin/faircamp" "$install_dir"
+
+rm -r "$tempdir"
+
+chmod +x "$install_dir/faircamp"
 
 ### $install_dir will automatically be initialized with some decent
 ### permissions by default ... however, you may need to recursively reapply
