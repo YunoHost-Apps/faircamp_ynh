@@ -29,7 +29,7 @@ dpkg-deb -R faircamp_0.15.1-1+deb11_amd64.deb "$tempdir"
 
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
-rm -r "$tempdir"
+ynh_secure_remove "$tempdir"
 
 chmod +x "$install_dir/faircamp"
 
@@ -53,11 +53,11 @@ chown "$app:$app" "$install_dir/config.toml"
 
 mkdir -p "$install_dir/content" "$install_dir/www"
 
-wget https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website/default_website.zip -P "$install_dir"
+wget https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website/default_website.zip -P "$install_dir" 2>&1
 
 unzip default_website.zip -d "$install_dir/content"
 
-rm -f "$install_dir/default_website.zip"
+ynh_secure_remove "$install_dir/default_website.zip"
 
 ynh_add_config --template="manifest.eno" --destination="$install_dir/content/manifest.eno"
 

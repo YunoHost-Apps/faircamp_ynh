@@ -33,7 +33,7 @@ dpkg-deb -R faircamp_0.15.1-1+deb11_amd64.deb "$tempdir"
 
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
-rm -r "$tempdir"
+ynh_secure_remove "$tempdir"
 
 chmod +x "$install_dir/faircamp"
 
