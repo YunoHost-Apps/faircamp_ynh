@@ -79,7 +79,7 @@ ynh_use_logrotate
 # DEFAULT WEBSITE GENERATION
 #=================================================
 
-#ynh_exec_as "$app" "$install_dir/faircamp" --build-dir "$install_dir/www" --catalog-dir "$install_dir/content" 2>&1
+systemctl start "$app.service"
 
 #=================================================
 # END OF SCRIPT
