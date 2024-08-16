@@ -55,7 +55,7 @@ mkdir -p "$install_dir/content" "$install_dir/www"
 
 wget https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website/default_website.zip -P "$install_dir" 2>&1
 
-unzip "$install_dir/default_website.zip" -d "$install_dir/content"
+unzip "$install_dir/default_website.zip" -d "$install_dir/content" 2>&1
 
 ynh_secure_remove "$install_dir/default_website.zip"
 
