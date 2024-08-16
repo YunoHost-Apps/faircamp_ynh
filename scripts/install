@@ -87,7 +87,7 @@ ynh_use_logrotate
 # DEFAULT WEBSITE GENERATION
 #=================================================
 
-ynh_exec_as "$app" "$install_dir/zola" --root "$install_dir" --config "$install_dir/config.toml" build
+ynh_exec_as "$app" "$install_dir/faircamp" --build-dir "$install_dir/www" --catalog-dir "$install_dir/content"
 
 #=================================================
 # END OF SCRIPT
