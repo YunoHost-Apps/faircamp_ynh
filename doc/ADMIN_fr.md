@@ -1,0 +1,5 @@
+- Votre Zola est installé dans `__INSTALL_DIR__`
+- Votre contenu doit être dans `__INSTALL_DIR__/content`
+- Votre fichier de configuration est `__INSTALL_DIR__/config.toml` (voir [la doc de configuration](https://www.getzola.org/documentation/getting-started/configuration/))
+- [Choisissez un thème](https://www.getzola.org/themes/), installez-le dans `__INSTALL_DIR__/themes`, puis configurez-le dans votre fichier `config.toml`.
+- Le site sera automatiquement mis à jour à chaque fois que vous modifierez quelque chose dans les dossiers `content`, `static`, `templates` ou `themes` ou le fichier `config.toml` !

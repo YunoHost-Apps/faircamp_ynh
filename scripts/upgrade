@@ -1,0 +1,63 @@
+#!/bin/bash
+
+
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+
+if [ -z "${auto_rebuild:-}" ]; then
+	auto_rebuild="true"
+	ynh_app_setting_set --app="$app" --key=auto_rebuild --value="$auto_rebuild"
+fi
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression --message="Upgrading source files..." --weight=1
+
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir"
+
+chmod +x "$install_dir/zola"
+
+### $install_dir will automatically be initialized with some decent
+### permissions by default ... however, you may need to recursively reapply
+### ownership to all files such as after the ynh_setup_source step
+chown -R "$app:www-data" "$install_dir"
+
+#=================================================
+# REAPPLY SYSTEM CONFIGURATIONS
+#=================================================
+ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
+
+ynh_add_nginx_config
+
+# adding systemd configs
+ynh_add_config --template="systemd.service" --destination="/etc/systemd/system/$app.service"
+ynh_add_config --template="systemd.path" --destination="/etc/systemd/system/$app.path"
+systemctl daemon-reload
+if $auto_rebuild; then
+    systemctl enable "$app.path" --quiet
+    systemctl start "$app.path"
+else
+    systemctl disable "$app.path" --quiet
+    systemctl stop "$app.path"
+fi
+
+yunohost service add "$app" --description="Zola" --log="/var/log/$app/$app.log" --test_status="systemctl is-active zola.path"
+
+ynh_use_logrotate --non-append
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression --message="Upgrade of $app completed" --last
