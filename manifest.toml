@@ -12,7 +12,7 @@ version = "0.15.1~ynh1"
 maintainers = [ "OniriCorpe" ]
 
 [upstream]
-license = "MIT"
+license = "AGPL-3.0-or-later"
 website = "https://simonrepp.com/faircamp/"
 admindoc = "https://simonrepp.com/faircamp/manual/"
 code = "https://codeberg.org/simonrepp/faircamp"
