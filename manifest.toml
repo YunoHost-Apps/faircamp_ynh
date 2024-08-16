@@ -52,6 +52,7 @@ ram.runtime = "50M"
     sha256 = "6eca022035eaae367dabb19adef1eda7ab800baf199ef215edffabef11acbfef"
     in_subdir = false
     extract = false
+    rename = "faircamp.deb"
 
     autoupdate.strategy = "latest_forgejo_tag"
 

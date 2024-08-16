@@ -25,7 +25,7 @@ tempdir="$(mktemp -d)"
 ynh_setup_source --dest_dir="$install_dir"
 
 # extract the binary from the deb file
-dpkg-deb -R faircamp_0.15.1-1+deb11_amd64.deb "$tempdir"
+dpkg-deb -R "$install_dir/faircamp.deb" "$tempdir"
 
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
