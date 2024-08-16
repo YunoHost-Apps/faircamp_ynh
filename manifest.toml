@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "faircamp"
 name = "Faircamp"
-description.en = "A static site generator for audio producers"
-description.fr = "Un générateur de site statique pour les producteurices audio"
+description.en = "A static site generator for audio artists and producers"
+description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
 version = "0.15.1~ynh1"
 
