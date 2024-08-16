@@ -81,6 +81,9 @@ ynh_use_logrotate
 
 systemctl start "$app.service"
 
+# wait for the site to be builded (while the service is active, it's not done)
+while (! systemctl -q is-active "$app.service") do sleep 0.01; done
+
 #=================================================
 # END OF SCRIPT
 #=================================================
