@@ -1,5 +1,5 @@
 [Unit]
-Description="Run 'faircamp --build-dir'"
+Description="Run the build of the Faircamp website"
 
 [Service]
 Type=exec

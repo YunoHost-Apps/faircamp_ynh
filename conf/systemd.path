@@ -1,5 +1,5 @@
 [Unit]
-Description="Lauch 'faircamp --build-dir' on content change"
+Description="Lauch the build of the Faircamp website on content change"
 
 [Path]
 PathModified=__INSTALL_DIR__/content
