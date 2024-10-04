@@ -23,7 +23,7 @@ With this package, Faircamp will automatically regenerate ([using Systemd Path U
 Alternatively to this package, you can [install Faircamp on your computer](https://simonrepp.com/faircamp/manual/installation.html) and use its rsync feature (ith the `--deploy` or `--deploy-destination` options) to send the builded website to a [My Webapp](https://apps.yunohost.org/app/my_webapp) folder on your YunoHost server.
 
 
-**Versión actual:** 0.15.1~ynh1
+**Versión actual:** 0.16.0~ynh1
 
 ## Capturas
 
@@ -39,7 +39,7 @@ Alternatively to this package, you can [install Faircamp on your computer](https
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/faircamp_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
