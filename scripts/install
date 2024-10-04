@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -21,7 +17,6 @@ ynh_script_progression "Setting up source files..."
 
 tempdir="$(mktemp -d)"
 
-# Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
 # extract the binary from the deb file
@@ -33,10 +28,6 @@ ynh_safe_rm "$tempdir"
 
 chmod +x "$install_dir/faircamp"
 
-### $install_dir will automatically be initialized with some decent
-### permission by default ... however, you may need to recursively reapply
-### ownership to all files such as after the ynh_setup_source step
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
@@ -52,7 +43,6 @@ ynh_safe_rm "$install_dir/default_website.zip"
 
 ynh_config_add --template="manifest.eno" --destination="$install_dir/content/manifest.eno"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
@@ -60,7 +50,6 @@ ynh_script_progression "Adding system configurations related to $app..."
 
 ynh_config_add_nginx
 
-# adding systemd configs
 ynh_config_add --destination="/etc/systemd/system/$app.service"
 ynh_config_add --template="systemd.path" --destination="/etc/systemd/system/$app.path"
 systemctl daemon-reload
