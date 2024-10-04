@@ -7,7 +7,7 @@ name = "Faircamp"
 description.en = "A static site generator for audio artists and producers"
 description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
-version = "0.15.1~ynh1"
+version = "0.16.0~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
@@ -49,8 +49,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://simonrepp.com/faircamp/packages/faircamp_0.15.1-1+deb11_amd64.deb"
-    sha256 = "6eca022035eaae367dabb19adef1eda7ab800baf199ef215edffabef11acbfef"
+    url = "https://codeberg.org/simonrepp/faircamp/archive/0.16.0.tar.gz"
+    sha256 = "aadb533a03f8afc26fec82cad9218e4c1adeb19fbc42842bbe93d40e264b1343"
     in_subdir = false
     extract = false
     rename = "faircamp.deb"
