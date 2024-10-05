@@ -49,8 +49,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://codeberg.org/simonrepp/faircamp/archive/0.16.0.tar.gz"
-    sha256 = "aadb533a03f8afc26fec82cad9218e4c1adeb19fbc42842bbe93d40e264b1343"
+    url = "https://simonrepp.com/faircamp/packages/faircamp_0.16.0-1+deb11_amd64.deb"
+    sha256 = "71bf5ad993c65181e16ba129bbda6aa52295022afd8a7a35f61836bb0922b580"
     in_subdir = false
     extract = false
     rename = "faircamp.deb"
