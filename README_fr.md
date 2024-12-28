@@ -23,7 +23,7 @@ Avec ce package, Faircamp régénérera automatiquement ([à l'aide de Systemd P
 En alternative à ce package, vous pouvez [installer Faircamp sur votre ordinateur](https://simonrepp.com/faircamp/manual/installation.html) et utiliser sa fonction rsync (avec les options `--deploy` ou `--deploy-destination`) pour envoyer le site web généré dans un dossier [My Webapp](https://apps.yunohost.org/app/my_webapp) sur votre serveur YunoHost.
 
 
-**Version incluse :** 0.16.0~ynh1
+**Version incluse :** 1.0.0~ynh1
 
 ## Captures d’écran
 
