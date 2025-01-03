@@ -16,6 +16,7 @@ license = "AGPL-3.0-or-later"
 website = "https://simonrepp.com/faircamp/"
 admindoc = "https://simonrepp.com/faircamp/manual/"
 code = "https://codeberg.org/simonrepp/faircamp"
+fund = "https://ko-fi.com/simonrepp"
 
 [integration]
 yunohost = ">= 11.2.30"
