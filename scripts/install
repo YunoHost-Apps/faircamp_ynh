@@ -76,4 +76,5 @@ while (systemctl -q is-active "$app.service") do sleep 0.01; done
 #=================================================
 # END OF SCRIPT
 #=================================================
+
 ynh_script_progression "Installation of $app completed"

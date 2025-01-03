@@ -17,7 +17,6 @@ ynh_script_progression "Upgrading source files..."
 
 tempdir="$(mktemp -d)"
 
-# Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
 # extract the binary from the deb file
