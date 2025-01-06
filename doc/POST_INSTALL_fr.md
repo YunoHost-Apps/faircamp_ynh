@@ -1,4 +1,4 @@
 - Votre Faircamp est installé dans `__INSTALL_DIR__`
 - Votre contenu doit être dans `__INSTALL_DIR__/content`
-- Votre fichier de configuration est `__INSTALL_DIR__/content/manifest.eno` (voir [la doc](https://simonrepp.com/faircamp/manual/manifests.html))
+- Votre fichier de configuration est `__INSTALL_DIR__/content/catalog.eno` (voir [la doc](https://simonrepp.com/faircamp/manual/manifests.html))
 - Le site sera automatiquement mis à jour à chaque fois que vous modifierez quelque chose dans le dossier `content` !
