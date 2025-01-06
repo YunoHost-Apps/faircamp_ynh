@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Faircamp
 
-[![集成程度](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/faircamp)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
+![工作状态](https://apps.yunohost.org/badge/state/faircamp)
+![维护状态](https://apps.yunohost.org/badge/maintained/faircamp)
 
 [![使用 YunoHost 安装 Faircamp](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 

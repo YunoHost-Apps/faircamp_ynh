@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Faircamp para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/faircamp)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/faircamp)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/faircamp)
 
 [![Instalar Faircamp con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 

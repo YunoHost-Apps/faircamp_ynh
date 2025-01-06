@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Faircamp voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/faircamp)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/faircamp)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/faircamp)
 
 [![Faircamp met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 

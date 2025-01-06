@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Faircamp untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/faircamp)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
+![Status kerja](https://apps.yunohost.org/badge/state/faircamp)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/faircamp)
 
 [![Pasang Faircamp dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 
