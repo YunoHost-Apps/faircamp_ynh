@@ -62,6 +62,11 @@ ram.runtime = "50M"
     extract = false
     rename = "faircamp.deb"
 
+    [resources.sources.website]
+    url = "https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website_1.0/default_website.zip"
+    sha256 = "2596d8a56d14f7c4b8aeb942edf182de76f1f7bde01f72d4f4b3387b02d9543a"
+    in_subdir = false
+
     autoupdate.strategy = "latest_forgejo_tag"
 
     [resources.system_user]

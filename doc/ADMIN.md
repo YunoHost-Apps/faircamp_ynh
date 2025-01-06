@@ -1,6 +1,6 @@
 - Your Faircamp is installed in `__INSTALL_DIR__`
 - Your content should be in `__INSTALL_DIR__/content`
-- Your config file is `__INSTALL_DIR__/content/manifest.eno` (see [docs](https://simonrepp.com/faircamp/manual/manifests.html))
+- Your config file is `__INSTALL_DIR__/content/catalog.eno` (see [docs](https://simonrepp.com/faircamp/manual/manifests.html))
 - The website will be automatically updated each time you modify something inside the `content` folder!
 
 If you need to run the build by hand:
@@ -9,5 +9,5 @@ If you need to run the build by hand:
 
 or
 
-- `cd __INSTALL_DIR__`
+- `sudo yunohost app shell __APP__`
 - `./faircamp --build-dir ./www --catalog-dir ./content`
