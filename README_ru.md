@@ -5,7 +5,9 @@
 
 # Faircamp для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/faircamp.svg)](https://ci-apps.yunohost.org/ci/apps/faircamp/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/faircamp.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/faircamp.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/faircamp)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
+![Состояние работы](https://apps.yunohost.org/badge/state/faircamp)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/faircamp)
 
 [![Установите Faircamp с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=faircamp)
 
@@ -23,7 +25,7 @@ With this package, Faircamp will automatically regenerate ([using Systemd Path U
 Alternatively to this package, you can [install Faircamp on your computer](https://simonrepp.com/faircamp/manual/installation.html) and use its rsync feature (ith the `--deploy` or `--deploy-destination` options) to send the builded website to a [My Webapp](https://apps.yunohost.org/app/my_webapp) folder on your YunoHost server.
 
 
-**Поставляемая версия:** 0.16.0~ynh1
+**Поставляемая версия:** 0.23.0~ynh1
 
 ## Снимки экрана
 
