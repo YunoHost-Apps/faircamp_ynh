@@ -7,7 +7,7 @@ name = "Faircamp"
 description.en = "A static site generator for audio artists and producers"
 description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
-version = "1.0.0~ynh1"
+version = "1.0.0~ynh2"
 
 maintainers = [ "OniriCorpe" ]
 
@@ -63,8 +63,8 @@ ram.runtime = "50M"
     rename = "faircamp.deb"
 
     [resources.sources.website]
-    url = "https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website_1.0/default_website.zip"
-    sha256 = "2596d8a56d14f7c4b8aeb942edf182de76f1f7bde01f72d4f4b3387b02d9543a"
+    url = "https://codeberg.org/simonrepp/faircamp/archive/1.0.0.tar.gz"
+    sha256 = "bc26a17aba006b7d2988038ec3bb32e9d4741b384ec74810d0f8be93c4dcdee3"
     in_subdir = false
 
     autoupdate.strategy = "latest_forgejo_tag"
