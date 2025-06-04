@@ -50,13 +50,6 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb11_amd64.deb"
-    sha256 = "2688703a4d605b855f8808d7585a2c4c7fbaf3aa3290847c6f2c8d739f5f8188"
-    format="whatever"
-    extract = false
-    rename = "faircamp.deb"
-
-    [resources.sources.bookworm]
     url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb12_amd64.deb"
     sha256 = "d33d9c4fb8b3deae0eceba0821d26c37741f33598e2bc32489a2f78f9e1e0c04"
     format="whatever"
