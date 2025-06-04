@@ -7,7 +7,7 @@ name = "Faircamp"
 description.en = "Static site generator for audio artists and producers"
 description.fr = "Générateur de site statique pour les artistes ou producteurices audio"
 
-version = "0.16.0~ynh1"
+version = "1.0.0~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
@@ -50,13 +50,24 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://simonrepp.com/faircamp/packages/faircamp_0.16.0-1+deb11_amd64.deb"
-    sha256 = "71bf5ad993c65181e16ba129bbda6aa52295022afd8a7a35f61836bb0922b580"
-    in_subdir = false
+    url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb11_amd64.deb"
+    sha256 = "2688703a4d605b855f8808d7585a2c4c7fbaf3aa3290847c6f2c8d739f5f8188"
+    format="whatever"
     extract = false
     rename = "faircamp.deb"
 
-    autoupdate.strategy = "latest_forgejo_tag"
+    [resources.sources.bookworm]
+    url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb12_amd64.deb"
+    sha256 = "d33d9c4fb8b3deae0eceba0821d26c37741f33598e2bc32489a2f78f9e1e0c04"
+    format="whatever"
+    extract = false
+    rename = "faircamp.deb"
+
+    [resources.sources.website]
+    url = "https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website_1.0/default_website.zip"
+    sha256 = "2596d8a56d14f7c4b8aeb942edf182de76f1f7bde01f72d4f4b3387b02d9543a"
+    in_subdir = false
+
 
     [resources.system_user]
 
@@ -67,4 +78,4 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "ffmpeg"
+    packages = ["ffmpeg", "libvips42" ]

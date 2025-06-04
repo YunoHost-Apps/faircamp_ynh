@@ -17,7 +17,14 @@ ynh_script_progression "Setting up source files..."
 
 tempdir="$(mktemp -d)"
 
-ynh_setup_source --dest_dir="$install_dir"
+# Download, check integrity, uncompress and patch the source from manifest.toml
+
+if [ $(lsb_release --codename --short) == 'bookworm' ]
+then
+    ynh_setup_source --dest_dir="$install_dir" --source_id="bookworm"
+else
+    ynh_setup_source --dest_dir="$install_dir"
+fi
 
 # extract the binary from the deb file
 dpkg-deb -R "$install_dir/faircamp.deb" "$tempdir"
@@ -33,15 +40,13 @@ chmod +x "$install_dir/faircamp"
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-mkdir -p "$install_dir/content" "$install_dir/www"
+ynh_setup_source --dest_dir="$install_dir/content" --source_id="website"
 
-wget https://github.com/YunoHost-Apps/faircamp_ynh/releases/download/default_website/default_website.zip -P "$install_dir" 2>&1
+ynh_add_config --template="manifest.eno" --destination="$install_dir/content/catalog.eno"
 
-unzip "$install_dir/default_website.zip" -d "$install_dir/content"
+mkdir -p "$install_dir/www"
 
-ynh_safe_rm "$install_dir/default_website.zip"
-
-ynh_config_add --template="manifest.eno" --destination="$install_dir/content/manifest.eno"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
