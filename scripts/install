@@ -36,7 +36,7 @@ ynh_script_progression "Adding $app's configuration files..."
 
 ynh_setup_source --dest_dir="$install_dir/content" --source_id="website"
 
-ynh_add_config --template="manifest.eno" --destination="$install_dir/content/catalog.eno"
+ynh_config_add --template="manifest.eno" --destination="$install_dir/content/catalog.eno"
 
 mkdir -p "$install_dir/www"
 
@@ -50,8 +50,10 @@ ynh_script_progression "Adding system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add --destination="/etc/systemd/system/$app.service"
+
 ynh_config_add --template="systemd.path" --destination="/etc/systemd/system/$app.path"
 systemctl daemon-reload
+
 if $auto_rebuild; then
     systemctl enable "$app.path" --quiet
     systemctl start "$app.path"
