@@ -7,7 +7,7 @@ name = "Faircamp"
 description.en = "A static site generator for audio artists and producers"
 description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
-version = "1.0.0~ynh1"
+version = "1.5.0~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
@@ -49,15 +49,15 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb11_amd64.deb"
-    sha256 = "2688703a4d605b855f8808d7585a2c4c7fbaf3aa3290847c6f2c8d739f5f8188"
+    url = "https://simonrepp.com/faircamp/packages/faircamp_1.5.0-1+deb11_amd64.deb"
+    sha256 = "edf6be6ef5d2cc1939e7d6c5b9a30eb088a85e26b4bc2a6f4563488064e78fe8"
     format="whatever"
     extract = false
     rename = "faircamp.deb"
 
     [resources.sources.bookworm]
-    url = "https://simonrepp.com/faircamp/packages/faircamp_1.0.0-1+deb12_amd64.deb"
-    sha256 = "d33d9c4fb8b3deae0eceba0821d26c37741f33598e2bc32489a2f78f9e1e0c04"
+    url = "https://simonrepp.com/faircamp/packages/faircamp_1.5.0-1+deb12_amd64.deb"
+    sha256 = "3036ca18a96b5374a1cf56245cc6ee746a93e5d4de31a037b00bd1c978ae6fbc"
     format="whatever"
     extract = false
     rename = "faircamp.deb"
