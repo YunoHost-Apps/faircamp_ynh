@@ -7,7 +7,7 @@ name = "Faircamp"
 description.en = "A static site generator for audio artists and producers"
 description.fr = "Un générateur de site statique pour les artistes ou producteurices audio"
 
-version = "1.0.0~ynh1"
+version = "1.5.0~ynh1"
 
 maintainers = [ "OniriCorpe" ]
 
