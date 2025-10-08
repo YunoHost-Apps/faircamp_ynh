@@ -12,12 +12,12 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 auto_rebuild=$(convert_bool "$YNH_APP_ARG_AUTO_REBUILD")
-ynh_app_setting_set --app="$app" --key=auto_rebuild --value="$auto_rebuild"
+ynh_app_setting_set --key=auto_rebuild --value="$auto_rebuild"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression "Setting up source files..."
 
 tempdir="$(mktemp -d)"
 
@@ -35,23 +35,20 @@ dpkg-deb -R "$install_dir/faircamp.deb" "$tempdir"
 
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
-ynh_secure_remove "$tempdir"
+ynh_safe_rm "$tempdir"
 
 chmod +x "$install_dir/faircamp"
 
-### $install_dir will automatically be initialized with some decent
-### permission by default ... however, you may need to recursively reapply
-### ownership to all files such as after the ynh_setup_source step
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding $app's configuration files..." --weight=1
+ynh_script_progression "Adding $app's configuration files..."
 
 ynh_setup_source --dest_dir="$install_dir/content" --source_id="website"
 
-ynh_add_config --template="manifest.eno" --destination="$install_dir/content/catalog.eno"
+ynh_config_add --template="manifest.eno" --destination="$install_dir/content/catalog.eno"
 
 mkdir -p "$install_dir/www"
 
@@ -60,13 +57,13 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+ynh_script_progression "Adding system configurations related to $app..."
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
 # adding systemd configs
-ynh_add_config --template="systemd.service" --destination="/etc/systemd/system/$app.service"
-ynh_add_config --template="systemd.path" --destination="/etc/systemd/system/$app.path"
+ynh_config_add_systemd --service="${app}" --template="systemd.service"
+ynh_config_add --template="systemd.path" --destination="/etc/systemd/system/$app.path"
 systemctl daemon-reload
 if $auto_rebuild; then
     systemctl enable "$app.path" --quiet
@@ -75,7 +72,7 @@ fi
 
 yunohost service add "$app" --description="Faircamp" --log="/var/log/$app/$app.log" --test_status="systemctl is-active $app.path"
 
-ynh_use_logrotate
+ynh_config_add_logrotate
 
 #=================================================
 # DEFAULT WEBSITE GENERATION
@@ -91,4 +88,4 @@ while (systemctl -q is-active "$app.service") do sleep 0.01; done
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"
