@@ -36,6 +36,7 @@ dpkg-deb -R "$install_dir/faircamp.deb" "$tempdir"
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
 ynh_safe_rm "$tempdir"
+ynh_safe_rm "$install_dir/faircamp.deb"
 
 chmod +x "$install_dir/faircamp"
 
