@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #=================================================
 # IMPORT GENERIC HELPERS
 #=================================================
@@ -11,17 +10,14 @@ source /usr/share/yunohost/helpers
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
-ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+ynh_script_progression "Ensuring downward compatibility..."
 
-if [ -z "${auto_rebuild:-}" ]; then
-	auto_rebuild="true"
-	ynh_app_setting_set --app="$app" --key=auto_rebuild --value="$auto_rebuild"
-fi
+ynh_app_setting_set_default --key=auto_rebuild --value="true"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Upgrading source files..." --weight=1
+ynh_script_progression "Upgrading source files..."
 
 tempdir="$(mktemp -d)"
 
@@ -38,25 +34,23 @@ dpkg-deb -R "$install_dir/faircamp.deb" "$tempdir"
 
 mv "$tempdir/usr/bin/faircamp" "$install_dir"
 
-ynh_secure_remove "$tempdir"
+ynh_safe_rm "$tempdir"
+ynh_safe_rm "$install_dir/faircamp.deb"
 
 chmod +x "$install_dir/faircamp"
 
-### $install_dir will automatically be initialized with some decent
-### permissions by default ... however, you may need to recursively reapply
-### ownership to all files such as after the ynh_setup_source step
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
+ynh_script_progression "Upgrading system configurations related to $app..."
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
 # adding systemd configs
-ynh_add_config --template="systemd.service" --destination="/etc/systemd/system/$app.service"
-ynh_add_config --template="systemd.path" --destination="/etc/systemd/system/$app.path"
+ynh_config_add_systemd --service="${app}" --template="systemd.service"
+ynh_config_add --template="systemd.path" --destination="/etc/systemd/system/$app.path"
 systemctl daemon-reload
 if $auto_rebuild; then
     systemctl enable "$app.path" --quiet
@@ -68,10 +62,21 @@ fi
 
 yunohost service add "$app" --description="Faircamp" --log="/var/log/$app/$app.log" --test_status="systemctl is-active $app.path"
 
-ynh_use_logrotate --non-append
+ynh_config_add_logrotate
+
+#=================================================
+# REGENERATE WEBSITE
+#=================================================
+
+# runned using systemctl and not a direct command line to avoid conflicting withe the '.path'
+# (running two build process at the same time is buggy and can lead to errors)
+systemctl start "$app.service"
+
+# wait for the site to be built (while the service is active, it's not done)
+while (systemctl -q is-active "$app.service") do sleep 0.01; done
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression "Upgrade of $app completed"

@@ -3,3 +3,5 @@
 test_format = 1.0
 
 [default]
+
+test_upgrade_from.c267b7dd2689a128e48491e93f20cfa156f3338d.name = "Helpers v1"
