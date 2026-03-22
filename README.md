@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Faircamp, packaged for YunoHost
 </h1>
 
-A static site generator for audio artists and producers
+Static site generator for audio artists and producers
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://simonrepp.com/faircamp/)
 [![Version: 1.7.0~ynh1](https://img.shields.io/badge/Version-1.7.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/faircamp/)
